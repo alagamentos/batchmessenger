@@ -8,31 +8,30 @@
   <title>WhatsApp Batch Messenger</title>
 </head>
 <body>
+  <header>
+    <nav>
+      <a href='#'>BatchMessenger</a>
+      <ul>
+        <li><a href='#'>Página de Teste</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <form action='/message' method='POST'>
       <textarea name='message' cols='30' rows='10' placeholder='Digite sua mensagem...' required></textarea>
       <button type='submit'>Enviar mensagem</button>
     </form>
-    <aside>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Telefone</th>
-              <th>&times;</th>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
-      <form action='/contacts' method='POST'>
-        <input type='text' name='name' placeholder='Nome (Ex: João da Silva)' required>
-        <input type='tel' name='phone' placeholder='Telefone (Ex: 5511987654321)' required>
-        <button type='submit'>Adicionar contato</button>
-      </form>
-    </aside>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Telefone</th>
+          <th>&times;</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
   </main>
   <template>
     <tr>
