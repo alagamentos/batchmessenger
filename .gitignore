@@ -4,3 +4,4 @@ debug.log
 app.db
 chromedriver*
 contacts.csv
+*.rest
