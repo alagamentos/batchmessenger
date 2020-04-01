@@ -10,36 +10,18 @@
 <body>
   <header>
     <nav>
-      <a href='#'>BatchMessenger</a>
+      <a href='/'>BatchMessenger</a>
       <ul>
-        <li><a href='/test.html'>Página de Teste</a></li>
+        <li><a href='/'>Página Principal</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <form action='/message' method='POST'>
+    <form action='/test' method='POST'>
       <textarea name='message' cols='30' rows='10' placeholder='Digite sua mensagem...' required></textarea>
+      <input type='tel' name='phones' placeholder='Telefone(s) (Ex: "5511987654321" ou "5511987654321, 5511963852741")' required>
       <button type='submit'>Enviar mensagem</button>
     </form>
-    <table>
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Telefone</th>
-          <th>&times;</th>
-        </tr>
-      </thead>
-      <tbody>
-      </tbody>
-    </table>
   </main>
-  <template>
-    <tr>
-      <td></td>
-      <td></td>
-      <td><span>&times;</span></td>
-    </tr>
-  </template>
-  <script src='main.js'></script>
 </body>
 </html>

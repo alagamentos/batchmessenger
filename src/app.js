@@ -14,6 +14,39 @@
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
 
+  app.post('/test', async (req, res) => {
+    const { message, phones : strPhones } = req.body
+
+    const phones = typeof strPhones === 'string' && strPhones.replace(/\s+/g, '').split(',').map(phone => ({ phone }))
+
+    if (typeof message !== 'string' || !Array.isArray(phones) || !phones.every(({ phone }) => /^[0-9]{8,}$/.test(phone))) {
+      return res.send(`
+        <script>
+          alert('Mensagem não informada e/ou formato(s) do(s) Telefone(s) inválido(s).')
+          window.location.href = '/test.html'
+        </script>
+      `)
+    }
+
+    if (!await isLogged(driver)) {
+      return res.send(`
+        <script>
+          alert('Você não está logado no WhatApp. Logue-se para poder enviar mensagens.')
+          window.location.href = '/test.html'
+        </script>
+      `)
+    }
+
+    await sendMessage(driver, phones, message)
+
+    res.status(200).send(`
+      <script>
+        alert('Mensagem enviada com sucesso.')
+        window.location.href = '/test.html'
+      </script>
+    `)
+  })
+
   app.post('/message', async (req, res) => {
     const { message } = req.body
 
