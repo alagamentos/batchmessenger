@@ -24,10 +24,10 @@ fetch('/contacts')
       $tbody.append($clone)
     })
 
-    const buttons = $tbody.querySelectorAll('tr td span')
+    const $buttons = $tbody.querySelectorAll('tr td span')
 
-    buttons.forEach(button => {
-      button.addEventListener('click', (evt) => {
+    $buttons.forEach($button => {
+      $button.addEventListener('click', (evt) => {
         const { id } = evt.target.parentElement.parentElement
 
         fetch(`/contacts/${id}`, { method: 'DELETE' })
