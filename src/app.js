@@ -1,11 +1,12 @@
 module.exports = async (contacts) => {
 
   const express = require('express')
-  const { initDriver, isLogged, sendMessage } = require('./selenium')
+  const { startDriver } = require('./selenium')
+  const { isLogged, sendMessage } = require('./whatsapp')
 
   const app = express()
   const PORT = process.env.PORT || 4000
-  const driver = await initDriver('chrome', 'https://web.whatsapp.com')
+  const driver = await startDriver('chrome', 'https://web.whatsapp.com')
 
   app.use(express.static('public'))
   app.use(express.json())
