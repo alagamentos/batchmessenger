@@ -2,11 +2,10 @@
   "name": "batchmessenger",
   "version": "1.0.0",
   "description": "Batch Messenger for WhatsApp",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "prestart": "node src/setup.js",
-    "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "Felipe Andrade",
@@ -14,8 +13,7 @@
   "dependencies": {
     "csv-parser": "^2.3.2",
     "express": "^4.17.1",
-    "selenium-webdriver": "^4.0.0-alpha.7",
-    "sqlite3": "^4.1.1"
+    "selenium-webdriver": "^4.0.0-alpha.7"
   },
   "devDependencies": {
     "nodemon": "^1.19.4"

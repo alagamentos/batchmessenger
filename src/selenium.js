@@ -32,7 +32,7 @@ const isLogged = async (driver) => {
 }
 
 const sendMessage = async (driver, contacts, message) => {
-  for (const { phone } of contacts) {
+  for (const phone of contacts) {
     try {
       const search = await driver.findElement(LOCATORS.SIDE).findElement(LOCATORS.EDITABLE)
       await search.clear()
