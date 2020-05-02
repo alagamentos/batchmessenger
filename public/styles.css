@@ -47,6 +47,10 @@ li {
   margin-left: 1.5rem;
 }
 
+.navitem-active {
+  font-weight: 700;
+}
+
 main {
   display: flex;
   justify-content: space-around;
