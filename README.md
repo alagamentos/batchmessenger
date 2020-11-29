@@ -30,4 +30,4 @@ Uma vez logado no WhatsApp, basta digitar ``http://localhost:4000`` em uma nova 
 
 > ATENÇÃO: Ao clicar para enviar uma mensagem, ela levará um tempo para ser redirecionada a todos os contatos da sua lista, a depender do tamanho desta. Enquanto esse processo estiver ocorrendo, NÃO MEXA na interface do WhatsApp Web, caso contrário, erros inesperados poderão acontecer.
 
-> AVISO: A interface do programa ficará travada durante o envio das mensagens, impossibilitando seu uso. Assim que o processo for finalizado, uma mensagem será enviada ao navegador informando seu fim e a interface voltará a ficar disponível para uso.
+> AVISO: A interface do site do programa ficará travada durante o envio das mensagens, impossibilitando seu uso. Assim que o processo for finalizado, uma mensagem será enviada ao navegador informando seu fim e a interface voltará a ficar disponível para uso.
